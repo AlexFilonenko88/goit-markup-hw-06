@@ -850,10 +850,8 @@ img {
 .footer-list {
   display: flex;
   align-items: baseline;
-}
-
-.footer-icon {
-  margin-left: 70px;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .footer-icon > h2 {
@@ -873,10 +871,6 @@ img {
 
 .icon-svg {
   fill: var(--primary-white-color);
-}
-
-.footer-nav-mail {
-  margin: 0 0 0 93px;
 }
 
 .footer-nav-mail > h2 {
@@ -914,6 +908,8 @@ img {
   background-color: inherit;
 
   padding: 15px 0 13px 16px;
+
+  width: 358px;
 }
 
 .footer-nav-button {
