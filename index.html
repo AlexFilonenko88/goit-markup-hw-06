@@ -62,30 +62,46 @@
                 <div class="backdrop-form">
                     <h2>Оставьте свои данные, мы вам перезвоним</h2>
                     <form class="form-list">
-                        <label for="">
+                        <label class="form-label" >
                             Имя
-                            <input type="text">
+                            <input class="backdrop-input" type="text" name="text" autofocus>
+                            <svg class="form-label-icon" width="18" height="18">
+                                <use href="./images/svg-sprite/icon.svg#icon-name"></use>
+                            </svg>
                         </label>
-                        <label for="">
+                            
+                        <label class="form-label">
                             Телефон
-                            <input type="tel">
+                            <input class="backdrop-input" type="tel" name="tel">
+                            <svg class="form-label-icon" width="18" height="18">
+                                <use href="./images/svg-sprite/icon.svg#icon-tel"></use>
+                            </svg>
                         </label>
-                        <label for="">
+                            
+                        <label class="form-label">
                             Почта
-                            <input type="email">
+                            <input class="backdrop-input" type="email" name="email">
+                            <svg class="form-label-icon" width="18" height="18">
+                                <use href="./images/svg-sprite/icon.svg#icon-email"></use>
+                            </svg>
                         </label>
-                        <label for="">
+                            
+                        <label class="form-label">
                             Комментарий
-                            <textarea  rows="5" placeholder="Введите текст" resiz="none">
-                            </textarea>
-                        </label>
+                            <textarea class="backdrop-input-textarea" placeholder="Введите текст" rows="90"></textarea>
+                        </label> 
                     </form>
-                    <form>
-                        <input type="checkbox" id="">
-                        <label for="">Соглашаюсь с рассылкой и принимаю Условия договора
+                    <form  class="backdrop-link">
+                        <label class="label-form">
+                            <input class="label-checkbox" type="checkbox" name="checkbox">
+                            <span class="icon-checkbox"></span> 
+                                Соглашаюсь с рассылкой и принимаю 
+                            <a class="label-form-link" href="#">Условия договора</a>
                         </label>
+                        <div>
+                        </div>
+                    </form>
                         <button class="form-button" type="submit">Отправить</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -453,7 +469,7 @@
                     <li>
                         <form class="footer-form">
                             <label for="mail"></label>
-                            <input class="footer-input" type="email" name="mail" id="mail" placeholder="E-mail" autocomplete="on">
+                            <input class="footer-input" type="email" name="mail-footer" id="mail" placeholder="E-mail" autocomplete="on">
                         </form>
                     </li>
                     <li>

@@ -66,17 +66,146 @@ img {
 
 .backdrop-form > h2 {
   margin: 0 0 12px 0;
+  font-size: 20px;
   text-align: center;
 }
 
 label {
+  display: block;
+}
+
+.form-label {
+  position: relative;
   display: flex;
   flex-direction: column;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.form-label-icon {
+  position: absolute;
+  top: 55%;
+  left: 12px;
+  transform: translateY(-55%);
+}
+.form-label:last-child {
+  margin-bottom: 20px;
+}
+
+.backdrop-input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding-left: 42px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-input-textarea {
+  resize: none;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.backdrop-input:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-input:focus + .form-label-icon {
+  fill: var(--accent-color);
+  /* transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.backdrop-input-textarea:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+}
+
+.backdrop-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label-form {
+  font-size: 14px;
+  line-height: 1.71;
+  color: #757575;
+  margin-bottom: 30px;
+  margin-right: 6px;
+
+  display: flex;
+  align-items: center;
+}
+
+.backdrop-link {
+  display: flex;
+  /* flex-direction: row;
+  align-items: start; */
+  justify-content: center;
+}
+
+.label-form-link {
+  margin-left: 6px;
+}
+
+.label-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.icon-checkbox {
+  display: inline-block;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label-checkbox:checked + .icon-checkbox {
+  background-color: var(--accent-color);
+  background-image: url("../images/svg-sprite/icon-check.svg");
+  background-size: contain;
+  border-color: var(--accent-color);
+  background-origin: border-box;
 }
 
 .form-button {
   width: 200px;
-  margin-left: 165px;
+  height: 50px;
+  background-color: #2196f3;
+  border-radius: 4px;
+  border: none;
+  color: var(--primary-white-color);
+  margin-bottom: 40px;
+  padding: 10px 55px;
+  cursor: pointer;
+}
+
+.form-button:focus {
+  outline: none;
 }
 
 .backdrop.is-hidden {
@@ -94,9 +223,9 @@ label {
   top: 50%;
   left: 50%;
 
-  min-height: 528px;
-  min-width: 581px;
-  padding: 40px 40px 20px 40px;
+  /* min-height: 528px;
+  min-width: 581px; */
+  padding: 40px 40px 0 40px;
   background-color: #ffffff;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -122,6 +251,10 @@ label {
   cursor: pointer;
   width: 30px;
   height: 30px;
+}
+
+.backdrop-button:hover {
+  fill: var(--accent-color);
 }
 
 .header,
