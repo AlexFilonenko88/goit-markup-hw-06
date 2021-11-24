@@ -828,7 +828,7 @@ label {
 
 .header,
 .header-portfolio,
-.header-cont {
+.header-container {
   display: flex;
 }
 
